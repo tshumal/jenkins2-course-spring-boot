@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>spring-boot-sample-atmosphere</artifactId>
 	<name>Spring Boot Atmosphere Sample</name>
-	<description>Spring Boot Atmosphere Sample</description>
+	<description>Spring Boot Atmosphere Sample Updated</description>
 	<url>http://projects.spring.io/spring-boot/</url>
 	<organization>
 		<name>Pivotal Software, Inc.</name>
@@ -75,6 +75,22 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+        <groupId>io.fabric8</groupId>
+        <artifactId>fabric8-maven-plugin</artifactId>
+        <version>${fabric8-maven-plugin.version}</version>
+        <executions>
+            <execution>
+                <id>fmp</id>
+                <phase>install</phase>
+                <goals>
+                    <goal>resource</goal>
+                    <goal>build</goal>
+                    <goal>helm</goal>
+                </goals>
+            </execution>
+        </executions>
+    </plugin>
 		</plugins>
 	</build>
 </project>
